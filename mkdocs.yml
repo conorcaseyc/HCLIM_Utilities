@@ -1,0 +1,19 @@
+site_name: HCLIM Utilities
+theme:
+  name: material
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
+            show_source: true
+            show_root_heading: true
+            separate_signature: true
+            members_order: source
+            show_signature_annotations: true
+            # important on HPC: avoid importing heavy deps while building docs
+            allow_inspection: false
+            # (you can add "inventories:" later if you want external cross-refs)
