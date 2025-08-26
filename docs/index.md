@@ -1,7 +1,7 @@
 # HCLIM Utilities
 
-Welcome to the documentation for **HCLIM Utilities**, a collection of Python 
-functions developed during the 2025 internship at **Met Éireann**.  
+Welcome to the documentation for **HCLIM Utilities**, a collection of Python functions developed during the 2025 internship at **Met Éireann**.  
+
 These utilities provide convenient building blocks for analysing and visualising 
 climate model output, with a focus on the HCLIM regional climate model and related datasets.
 
