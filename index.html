@@ -203,6 +203,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    HCLIM Utilities
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="." class="md-nav__link md-nav__link--active">
         
   
@@ -214,6 +227,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -261,6 +326,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -276,9 +382,56 @@
 
 
 <h1 id="hclim-utilities">HCLIM Utilities</h1>
-<p>Documentation for a small set of Iris plotting and processing utilities.
-Docstrings follow the <strong>NumPy style</strong> and are rendered automatically via <strong>mkdocstrings</strong>.</p>
-<p>Use the <strong>API Reference</strong> in the sidebar to browse functions.</p>
+<p>Welcome to the documentation for <strong>HCLIM Utilities</strong>, a collection of Python 
+functions developed during the 2025 internship at <strong>Met Éireann</strong>.<br />
+These utilities provide convenient building blocks for analysing and visualising 
+climate model output, with a focus on the HCLIM regional climate model and related datasets.</p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This package contains tools for:</p>
+<ul>
+<li>
+<p><strong>Data I/O</strong><br />
+  Functions to load GRIB and NetCDF files into <a href="https://scitools-iris.readthedocs.io/"><code>iris</code></a> 
+  cubes and ensure consistent attributes and time handling.</p>
+</li>
+<li>
+<p><strong>Gridding and regridding</strong><br />
+  Utilities to create target rectilinear grids, regrid cubes, and extract common 
+  periods across multiple datasets.</p>
+</li>
+<li>
+<p><strong>Diagnostics and statistics</strong><br />
+  Functions to compute rainfall accumulations, biases, diurnal cycles, and add 
+  summary statistics (MAE, bias, standard deviation) directly to plots.</p>
+</li>
+<li>
+<p><strong>Plotting</strong><br />
+  Ready-made plotting functions for:</p>
+</li>
+<li>Spatial parameter maps (temperature, pressure, precipitation, etc.)</li>
+<li>Bias plots and animations</li>
+<li>Cyclone tracks</li>
+<li>
+<p>Time series at specific locations or averaged over a region</p>
+</li>
+<li>
+<p><strong>Animations</strong><br />
+  Functions for producing animated weather maps or parameter fields over time, 
+  useful for case study analysis and communication.</p>
+</li>
+</ul>
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Python 3.11 (recommended via Conda)</li>
+<li><a href="https://scitools-iris.readthedocs.io/">Iris</a>  </li>
+<li><a href="https://scitools.org.uk/cartopy/docs/latest/">Cartopy</a>  </li>
+<li><a href="https://docs.xarray.dev/">Xarray</a>  </li>
+<li><a href="https://matplotlib.org/">Matplotlib</a>  </li>
+<li><a href="https://tqdm.github.io/">Tqdm</a>  </li>
+</ul>
 
 
 
