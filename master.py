@@ -28,14 +28,14 @@ def load_grib_files(folder, param, standard_name, constraint=None):
 	"""
     Load multiple GRIB files from a folder, extract a parameter, and merge into a single Iris cube.
 
-    Each GRIB2 file is opened with Xarray (via cfgrib), converted to an Iris cube, 
+    Each GRIB file is opened with Xarray (via cfgrib), converted to an Iris cube, 
     and combined into a merged cube with unified time units and equalised attributes. 
     Optionally, a constraint can be applied to extract a subset of the data.
 
     Parameters
     ----------
     folder : str
-        Path to the folder containing `.grib` or `.grib2` files.
+        Path to the folder containing `.grib` or `.GRIB` files.
     param : str
         Variable/parameter name in the GRIB files to load (e.g., 't2m' for 2m temperature).
     standard_name : str
@@ -47,12 +47,12 @@ def load_grib_files(folder, param, standard_name, constraint=None):
     Returns
     -------
     processed_cube : iris.cube.Cube
-        Merged Iris cube containing the requested parameter from all GRIB2 files.
+        Merged Iris cube containing the requested parameter from all GRIB files.
     """
 	# Get list of files.
 	files = [
 		f for f in os.listdir(folder)
-		if os.path.isfile(os.path.join(folder, f)) and (f.endswith(".grib") or f.endswith(".grib2"))
+		if os.path.isfile(os.path.join(folder, f)) and (f.endswith(".grib") or f.endswith(".GRIB"))
 	]
 
 	# Loop through files.
